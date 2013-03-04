@@ -1,0 +1,76 @@
+﻿@font-face {
+    font-family: 'Arvo';
+    src: url('/Fonts/Arvo/Arvo-Regular-webfont.eot');
+    src: url('/Fonts/Arvo/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/Fonts/Arvo/Arvo-Regular-webfont.woff') format('woff'),
+         url('/Fonts/Arvo/Arvo-Regular-webfont.ttf') format('truetype'),
+         url('/Fonts/Arvo/Arvo-Regular-webfont.svg#ArvoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('/Fonts/OpenSans/OpenSans-Light-webfont.eot');
+    src: url('/Fonts/OpenSans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/Fonts/OpenSans/OpenSans-Light-webfont.woff') format('woff'),
+         url('/Fonts/OpenSans/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('/Fonts/OpenSans/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #0772A1 url('/images/background.png') repeat-x fixed top left;
+    font-family: Verdana, sans-serif;
+    min-width: 670px;
+}
+
+header {
+    float: right;
+    clear: both;
+    margin: 90px 50px 10px 100px;
+}
+
+    header nav {
+        font-family: Arvo, Verdana, sans-serif;
+        font-size: 3em;
+    }
+
+        header nav ul {
+            margin-top: 20px;
+        }
+
+            header nav ul li {
+                display: inline;
+                margin-right: 30px;
+            }
+
+a {
+    color: #FFF;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+    
+a:hover, a:active {
+    text-decoration: none;
+    text-shadow: #FFF 0px 0px 10px;
+}
+
+#content {
+    clear: both;
+    margin: 0 0 30px 100px;
+    padding: 15px 15px 5px 15px;
+    font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+    background-color: #FFA540;
+    color: #F9F9F9;
+    border-radius: 3px;
+    line-height: 1.1em;
+    width: 400px;
+}
+
+    #content p {
+        margin-bottom: 1em;
+    }

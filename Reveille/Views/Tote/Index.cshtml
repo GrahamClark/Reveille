@@ -1,0 +1,182 @@
+﻿@using Reveille.Models
+@{
+    ViewBag.Title = "Table of the Elements discography";
+    ViewBag.Number = 1;
+}
+
+@helper Element(string symbol, string name, ElementType elementType) {
+    @Html.Partial("_Element", new { Symbol = symbol, Name = name, ElementType = elementType, Number = ViewBag.Number++ });
+}
+
+@section css {
+    <link href="~/Content/tote.css" rel="stylesheet" type="text/css" />
+}
+
+@section header{
+}
+
+<div id="toteContainer">
+    <div class="toteRow">
+        @Element("H", "Hydrogen", ElementType.NonMetal)
+        @for (int i = 0; i < 16; i++)
+        {
+            <div class="empty"></div>
+        }
+
+        @Element("He", "Helium", ElementType.NobleGas)
+    </div>
+    <div class="toteRow">
+        @Element("Li", "Lithium", ElementType.AlkaliMetal)
+        @Element("Be", "Beryllium", ElementType.AlkalineEarthMetal)
+        @for (int i = 0; i < 10; i++)
+        {
+            <div class="empty"></div>
+        }
+
+        @Element("B", "Boron", ElementType.NonMetal)
+        @Element("C", "Carbon", ElementType.NonMetal)
+        @Element("N", "Nitrogen", ElementType.NonMetal)
+        @Element("O", "Oxygen", ElementType.NonMetal)
+        @Element("F", "Fluorine", ElementType.NonMetal)
+        @Element("Ne", "Neon", ElementType.NobleGas)
+    </div>
+    <div class="toteRow">
+        @Element("Na", "Sodium", ElementType.AlkaliMetal)
+        @Element("Mg", "Magnesium", ElementType.AlkalineEarthMetal)
+        @for (int i = 0; i < 10; i++)
+        {
+            <div class="empty"></div>
+        }
+
+        @Element("Al", "Aluminium", ElementType.OtherMetal)
+        @Element("Si", "Silicon", ElementType.NonMetal)
+        @Element("P", "Phosphorus", ElementType.NonMetal)
+        @Element("S", "Sulfur", ElementType.NonMetal)
+        @Element("Cl", "Chlorine", ElementType.NonMetal)
+        @Element("Ar", "Argon", ElementType.NobleGas)
+    </div>
+    <div class="toteRow">
+        @Element("K", "Potassium", ElementType.AlkaliMetal)
+        @Element("Ca", "Calcium", ElementType.AlkalineEarthMetal)
+        @Element("Sc", "Scandium", ElementType.TransitionMetal)
+        @Element("Ti", "Titanium", ElementType.TransitionMetal)
+        @Element("V", "Vanadium", ElementType.TransitionMetal)
+        @Element("Cr", "Chromium", ElementType.TransitionMetal)
+        @Element("Mn", "Manganese", ElementType.TransitionMetal)
+        @Element("Fe", "Iron", ElementType.TransitionMetal)
+        @Element("Co", "Cobalt", ElementType.TransitionMetal)
+        @Element("Ni", "Nickel", ElementType.TransitionMetal)
+        @Element("Cu", "Copper", ElementType.TransitionMetal)
+        @Element("Zn", "Zinc", ElementType.TransitionMetal)
+        @Element("Ga", "Gallium", ElementType.OtherMetal)
+        @Element("Ge", "Germanium", ElementType.OtherMetal)
+        @Element("As", "Arsenic", ElementType.NonMetal)
+        @Element("Se", "Selenium", ElementType.NonMetal)
+        @Element("Br", "Bromine", ElementType.NonMetal)
+        @Element("Kr", "Krypton", ElementType.NobleGas)
+    </div>
+    <div class="toteRow">
+        @Element("Rb", "Rubidium", ElementType.AlkaliMetal)
+        @Element("Sr", "Strontium", ElementType.AlkalineEarthMetal)
+        @Element("Y", "Yttrium", ElementType.TransitionMetal)
+        @Element("Zr", "Zirconium", ElementType.TransitionMetal)
+        @Element("Nb", "Niobium", ElementType.TransitionMetal)
+        @Element("Mo", "Molybdenum", ElementType.TransitionMetal)
+        @Element("Tc", "Technetium", ElementType.TransitionMetal)
+        @Element("Ru", "Ruthenium", ElementType.TransitionMetal)
+        @Element("Rh", "Rhodium", ElementType.TransitionMetal)
+        @Element("Pd", "Palladium", ElementType.TransitionMetal)
+        @Element("Ag", "Silver", ElementType.TransitionMetal)
+        @Element("Cd", "Cadmium", ElementType.TransitionMetal)
+        @Element("In", "Indium", ElementType.OtherMetal)
+        @Element("Sn", "Tin", ElementType.OtherMetal)
+        @Element("Sb", "Antimony", ElementType.OtherMetal)
+        @Element("Te", "Tellurium", ElementType.NonMetal)
+        @Element("I", "Iodine", ElementType.NonMetal)
+        @Element("Xe", "Xenon", ElementType.NobleGas)
+    </div>
+    <div class="toteRow">
+        @Element("Cs", "Caesium", ElementType.AlkaliMetal)
+        @Element("Ba", "Barium", ElementType.AlkalineEarthMetal)
+        @{ ViewBag.Number += 15;}
+        <div class="empty"></div>
+        @Element("Hf", "Hafnium", ElementType.TransitionMetal)
+        @Element("Ta", "Tantalum", ElementType.TransitionMetal)
+        @Element("W", "Tungsten", ElementType.TransitionMetal)
+        @Element("Re", "Rhenium", ElementType.TransitionMetal)
+        @Element("Os", "Osmium", ElementType.TransitionMetal)
+        @Element("Ir", "Iridium", ElementType.TransitionMetal)
+        @Element("Pt", "Platinum", ElementType.TransitionMetal)
+        @Element("Au", "Gold", ElementType.TransitionMetal)
+        @Element("Hg", "Mercury", ElementType.TransitionMetal)
+        @Element("Tl", "Thallium", ElementType.OtherMetal)
+        @Element("Pb", "Lead", ElementType.OtherMetal)
+        @Element("Bi", "Bismuth", ElementType.OtherMetal)
+        @Element("Po", "Polonium", ElementType.OtherMetal)
+        @Element("At", "Astatine", ElementType.NonMetal)
+        @Element("Rn", "Radon", ElementType.NobleGas)
+    </div>
+    <div class="toteRow">
+        @Element("Fr", "Francium", ElementType.AlkaliMetal)
+        @Element("Ra", "Radium", ElementType.AlkalineEarthMetal)
+        @{ ViewBag.Number += 15;}
+        <div class="empty"></div>
+        @Element("Rf", "Rutherfordium", ElementType.TransitionMetal)
+        @Element("Db", "Dubnium", ElementType.TransitionMetal)
+        @Element("Sg", "Seaborgium", ElementType.TransitionMetal)
+        @Element("Bh", "Bohrium", ElementType.TransitionMetal)
+        @Element("Hs", "Hassium", ElementType.TransitionMetal)
+        @Element("Mt", "Meitnerium", ElementType.TransitionMetal)
+        @Element("Ds", "Darmstadtium", ElementType.TransitionMetal)
+        @Element("Rg", "Roentgenium", ElementType.TransitionMetal)
+        @Element("Cn", "Copernicium", ElementType.TransitionMetal)
+        @Element("Uut", "Ununtrium", ElementType.OtherMetal)
+        @Element("Fl", "Flerovium", ElementType.OtherMetal)
+        @Element("Uup", "Ununpentium", ElementType.OtherMetal)
+        @Element("Lv", "Livermorium", ElementType.OtherMetal)
+        @Element("Uus", "Ununseptium", ElementType.NonMetal)
+        @Element("Uuo", "Ununoctium", ElementType.NobleGas)
+    </div>
+    <div class="toteRow" style="margin-top: 40px">
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        @{ ViewBag.Number = 57;}
+        @Element("La", "Lanthanum", ElementType.TransitionMetal)
+        @Element("Ce", "Cerium", ElementType.TransitionMetal)
+        @Element("Pr", "Praseodymium", ElementType.TransitionMetal)
+        @Element("Nd", "Neodymium", ElementType.TransitionMetal)
+        @Element("Pm", "Promethium", ElementType.TransitionMetal)
+        @Element("Sm", "Samarium", ElementType.TransitionMetal)
+        @Element("Eu", "Europium", ElementType.TransitionMetal)
+        @Element("Gd", "Gadolinium", ElementType.TransitionMetal)
+        @Element("Tb", "Terbium", ElementType.TransitionMetal)
+        @Element("Dy", "Dysprosium", ElementType.TransitionMetal)
+        @Element("Ho", "Holmium", ElementType.TransitionMetal)
+        @Element("Er", "Erbium", ElementType.TransitionMetal)
+        @Element("Tm", "Thulium", ElementType.TransitionMetal)
+        @Element("Yb", "Ytterbium", ElementType.TransitionMetal)
+        @Element("Lu", "Lutetium", ElementType.TransitionMetal)
+    </div>
+    <div class="toteRow">
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        @{ ViewBag.Number = 89;}
+        @Element("Ac", "Actinium", ElementType.TransitionMetal)
+        @Element("Th", "Thorium", ElementType.TransitionMetal)
+        @Element("Pa", "Protactinium", ElementType.TransitionMetal)
+        @Element("U", "Uranium", ElementType.TransitionMetal)
+        @Element("Np", "Neptunium", ElementType.TransitionMetal)
+        @Element("Pu", "Plutonium", ElementType.TransitionMetal)
+        @Element("Am", "Americium", ElementType.TransitionMetal)
+        @Element("Cm", "Curium", ElementType.TransitionMetal)
+        @Element("Bk", "Berkelium", ElementType.TransitionMetal)
+        @Element("Cf", "Californium", ElementType.TransitionMetal)
+        @Element("Es", "Einsteinium", ElementType.TransitionMetal)
+        @Element("Fm", "Fermium", ElementType.TransitionMetal)
+        @Element("Md", "Mendelevium", ElementType.TransitionMetal)
+        @Element("No", "Nobelium", ElementType.TransitionMetal)
+        @Element("Lr", "Lawrencium", ElementType.TransitionMetal)
+    </div>
+</div>

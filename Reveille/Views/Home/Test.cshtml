@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Test";
+}
+@section css {
+<style>
+    #d {
+    }
+    .a {
+        height: 50px;
+        color: #00008b;
+        text-align: center;
+        line-height: 45px;
+        margin: 20px;
+        width: 80px;
+        background-color: #eee8aa;
+        -moz-transition: all 2s;
+        -o-transition: all 2s;
+        -webkit-transition: all 2s;
+        transition: all 2s;
+    }
+    .a:hover {
+        -webkit-transform: scale(2.5);
+        -moz-transfrom: scale(2.5);
+        -o-transform: scale(2.5);
+        transform: scale(2.5);
+    }
+</style>
+}
+@section header
+{}
+
+<div id="d" class="a">test</div>

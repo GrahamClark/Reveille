@@ -1,0 +1,12 @@
+﻿@using System.Text.RegularExpressions
+@using Reveille.Models
+
+@helper ElementTypeToClass(ElementType elementType) {
+    @Regex.Replace(elementType.ToString(), "[a-z][A-Z]", m => m.Value[0] + "-" + m.Value[1]).ToLowerInvariant()
+}
+
+<div class="element @ElementTypeToClass(Model.ElementType)">
+    <p class="element-number">@Model.Number</p>
+    <p class="symbol">@Model.Symbol</p>
+    <p class="element-name">@Model.Name</p>
+</div>
